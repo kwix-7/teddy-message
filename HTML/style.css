@@ -1,0 +1,197 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #160b20, #30152f, #120b1c);
+    color: #fff;
+    overflow: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.scene {
+    display: none;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+.scene.active {
+    display: block;
+}
+
+h1 {
+    font-size: 45px;
+    margin: 20px 0;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 42px;
+    margin-top: 30px;
+    font-weight: normal;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin: 25px 0;
+}
+
+.small-text {
+    font-size: 17px;
+    opacity: 0.8;
+}
+
+button {
+    margin-top: 25px;
+    padding: 13px 28px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 30px;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.05);
+}
+
+.teddy {
+    font-size: 90px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.flower {
+    font-size: 85px;
+    animation: flowerMove 3s ease-in-out infinite;
+}
+
+.bee {
+    font-size: 75px;
+    animation: fly 2s ease-in-out infinite;
+}
+
+.final-stars {
+    font-size: 35px;
+    animation: sparkle 2s infinite;
+}
+
+.final-heart {
+    font-size: 70px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.signature {
+    font-style: italic;
+    margin-top: 25px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes flowerMove {
+    0%, 100% {
+        transform: rotate(-5deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(5deg) scale(1.08);
+    }
+}
+
+@keyframes fly {
+    0%, 100% {
+        transform: translateX(-10px) translateY(0);
+    }
+
+    50% {
+        transform: translateX(10px) translateY(-12px);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .teddy {
+        font-size: 70px;
+    }
+
+    .flower {
+        font-size: 65px;
+    }
+
+    .bee {
+        font-size: 60px;
+    }
+}
